@@ -1,53 +1,64 @@
+// https://github.com/Razibul-Alam/javascript_assignment3
+
 // kilometer to meter calculator
 // we know 1 kelometer = 1000 meter
 function kilometerToMeter(kilometer) {
     if(kilometer<1){
-        console.log('it is not valid')
+        console.log('kilometer value can not be nagetive and 0 ')
     }else{
     var meter = kilometer * 1000;
     return meter;}
 }
-var result = kilometerToMeter(-2)
-//console.log(result)
+var result = kilometerToMeter(5)
+console.log(result)
+
 
 // budget calculator watch; mobile; laptop
 var watchPrice = 500;
 var mobilePrice = 10000;
-var laptopPrice = 40000;
+var laptopPrice = 50000;
 
 function budgetCalculator(numofWatch,numofMobile,numofLaptop) {
 
-    if(numofLaptop<1||numofLaptop)
+    if(numofWatch<0||numofMobile<0||numofLaptop<0){
+        console.log('nagetive value is not valid')
+    }else{
     var watchCost = watchPrice * numofWatch;
     var mobileCost = mobilePrice * numofMobile;
     var laptopCost = laptopPrice * numofLaptop;
     var totalCost = watchCost + mobileCost + laptopCost;
-    return totalCost;
+    return totalCost;}
 }
-var price = budgetCalculator(2,3,4)
+var price = budgetCalculator(2,4,1)
 console.log(price);
 
 // hotel cost calculator
-// first 10 days cost = 500/day
-// second 10 days cost = 400/day
-// third 10 days cost= 300/day
+// first 10 days cost = 300/day
+// second 10 days cost = 200/day
+// after 20 days cost= 100/day
+var tenDaysRent = 300;
+var after10DaysRent = 200;
+var after20DaysRent = 100;
 
 function hotelCost(days) {
-    if(days<1){console.log('not valid')}else{
-    if (days <= 10) {
-        var cost = days * 500;
-    } else if (days <= 20) {
-        var firstTenDays = 10 * 500;
-        var cost = (days - 10) * 400 + firstTenDays;
+    if (days < 1) {
+        console.log('days value can not be nagetive and 0')
     } else {
-        var firstTenDays = 10 * 500;
-        var secondTenDays = 10 * 400;
-        var cost = (days - 20) * 300 + firstTenDays + secondTenDays;
+        if (days <= 10) {
+            var totalCost = days * tenDaysRent;
+        } else if (days <= 20) {
+            var firstTenDaysCost = 10 *tenDaysRent;
+            var totalCost = (days - 10) *after10DaysRent  + firstTenDaysCost;
+        } else {
+            var firstTenDaysCost = 10 * tenDaysRent;
+            var secondTenDaysCost = 10 * after10DaysRent;
+            var totalCost = (days - 20) * after20DaysRent+ firstTenDaysCost + secondTenDaysCost;
+        }
+        return totalCost;
     }
-    return cost;}
 }
-var counter = hotelCost(0);
-// console.log(counter)
+var counter = hotelCost(45);
+console.log(counter)
 
 // findout megafriend name
 
@@ -65,5 +76,5 @@ function megaFriend(names) {
     }
     return max;}
 }
-var friend = megaFriend(['fjj','fjk','fkj','fjkk'])
+var friend = megaFriend(['shakib','mushfik','tamim','mahmudullah'])
 console.log(friend)
