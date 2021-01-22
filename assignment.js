@@ -61,13 +61,15 @@ var counter = hotelCost(45);
 console.log(counter)
 
 // findout megafriend name
+// enter an array in the magaFriend function
 
 function megaFriend(names) {
+    var max = ''
     if(names==''||names==0){
         console.log('it is unvalid')
     }else{
     for (var i = 0; i < names.length; i++) {
-        var max = names[0]
+        
         var element = names[i];
         if (element.length > max.length) {
             max = element;
@@ -76,5 +78,5 @@ function megaFriend(names) {
     }
     return max;}
 }
-var friend = megaFriend(['shakib','mushfik','tamim','mahmudullah'])
+var friend = megaFriend(['shakib','tamim','mahmudullah','habibulllla'])
 console.log(friend)
