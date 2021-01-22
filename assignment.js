@@ -9,8 +9,7 @@ function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
     return meter;}
 }
-var result = kilometerToMeter(5)
-console.log(result)
+
 
 
 // budget calculator watch; mobile; laptop
@@ -29,8 +28,7 @@ function budgetCalculator(numofWatch,numofMobile,numofLaptop) {
     var totalCost = watchCost + mobileCost + laptopCost;
     return totalCost;}
 }
-var price = budgetCalculator(2,4,1)
-console.log(price);
+
 
 // hotel cost calculator
 // first 10 days cost = 300/day
@@ -57,15 +55,14 @@ function hotelCost(days) {
         return totalCost;
     }
 }
-var counter = hotelCost(45);
-console.log(counter)
+
 
 // findout megafriend name
 // enter an array in the magaFriend function
 
 function megaFriend(names) {
     var max = ''
-    if(names==''||names==0){
+    if(names==''){
         console.log('it is unvalid')
     }else{
     for (var i = 0; i < names.length; i++) {
@@ -78,5 +75,5 @@ function megaFriend(names) {
     }
     return max;}
 }
-var friend = megaFriend(['shakib','tamim','mahmudullah','habibulllla'])
-console.log(friend)
+// var friend = megaFriend(['shakib','tamim','mahmudullah','habibulllla'])
+// console.log(friend)
