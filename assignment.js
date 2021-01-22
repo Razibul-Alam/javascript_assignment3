@@ -3,11 +3,12 @@
 // kilometer to meter calculator
 // we know 1 kelometer = 1000 meter
 function kilometerToMeter(kilometer) {
-    if(kilometer<1){
+    if (kilometer < 1) {
         console.log('kilometer value can not be nagetive and 0 ')
-    }else{
-    var meter = kilometer * 1000;
-    return meter;}
+    } else {
+        var meter = kilometer * 1000;
+        return meter;
+    }
 }
 
 
@@ -17,16 +18,17 @@ var watchPrice = 500;
 var mobilePrice = 10000;
 var laptopPrice = 50000;
 
-function budgetCalculator(numofWatch,numofMobile,numofLaptop) {
+function budgetCalculator(numofWatch, numofMobile, numofLaptop) {
 
-    if(numofWatch<0||numofMobile<0||numofLaptop<0){
+    if (numofWatch < 0 || numofMobile < 0 || numofLaptop < 0) {
         console.log('nagetive value is not valid')
-    }else{
-    var watchCost = watchPrice * numofWatch;
-    var mobileCost = mobilePrice * numofMobile;
-    var laptopCost = laptopPrice * numofLaptop;
-    var totalCost = watchCost + mobileCost + laptopCost;
-    return totalCost;}
+    } else {
+        var watchCost = watchPrice * numofWatch;
+        var mobileCost = mobilePrice * numofMobile;
+        var laptopCost = laptopPrice * numofLaptop;
+        var totalCost = watchCost + mobileCost + laptopCost;
+        return totalCost;
+    }
 }
 
 
@@ -45,12 +47,12 @@ function hotelCost(days) {
         if (days <= 10) {
             var totalCost = days * tenDaysRent;
         } else if (days <= 20) {
-            var firstTenDaysCost = 10 *tenDaysRent;
-            var totalCost = (days - 10) *after10DaysRent  + firstTenDaysCost;
+            var firstTenDaysCost = 10 * tenDaysRent;
+            var totalCost = (days - 10) * after10DaysRent + firstTenDaysCost;
         } else {
             var firstTenDaysCost = 10 * tenDaysRent;
             var secondTenDaysCost = 10 * after10DaysRent;
-            var totalCost = (days - 20) * after20DaysRent+ firstTenDaysCost + secondTenDaysCost;
+            var totalCost = (days - 20) * after20DaysRent + firstTenDaysCost + secondTenDaysCost;
         }
         return totalCost;
     }
@@ -62,18 +64,19 @@ function hotelCost(days) {
 
 function megaFriend(names) {
     var max = ''
-    if(names==''){
+    if (names == '') {
         console.log('it is unvalid')
-    }else{
-    for (var i = 0; i < names.length; i++) {
-        
-        var element = names[i];
-        if (element.length > max.length) {
-            max = element;
-        }
+    } else {
+        for (var i = 0; i < names.length; i++) {
 
+            var element = names[i];
+            if (element.length > max.length) {
+                max = element;
+            }
+
+        }
+        return max;
     }
-    return max;}
 }
 // var friend = megaFriend(['shakib','tamim','mahmudullah','habibulllla'])
 // console.log(friend)
